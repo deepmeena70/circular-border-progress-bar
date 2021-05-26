@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.circle {
+    position: absolute;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.circle-display-one {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+}
+
+.circle-display-two {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    overflow: hidden
+}
+
+.circle-half-one {
+    position: absolute;
+    border: 20px solid white;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transform: rotate(135deg);
+    animation: load-2 2s linear 2s forwards;
+    left: 0%;
+}
+
+.circle-half-one:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    border-top-color: lightpink;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: lightpink;
+    border-width: 20px 20px 20px 20px;
+    position: absolute;
+    border-style: solid;
+    transform: translate(-50%, -50%);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+    box-shadow: 0 0 12px lightpink;
+}
+
+.circle-half-two {
+    position: absolute;
+    border: 20px solid white;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    transform: rotate(-45deg);
+    animation: load-1 linear 2s forwards;
+    left: -100%;
+}
+
+.circle-half-two:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    border-top-color: lightpink;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: lightpink;
+    border-width: 20px 20px 20px 20px;
+    position: absolute;
+    border-style: solid;
+    transform: translate(-50%, -50%);
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+@keyframes load-1 {
+    from {
+        transform: rotate(-45deg)
+    }
+    to {
+        transform: rotate(135deg)
+    }
+}
+
+@keyframes load-2 {
+    from {
+        transform: rotate(135deg)
+    }
+    to {
+        transform: rotate(315deg)
+    }
+}
+
+.progress-text {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+}
